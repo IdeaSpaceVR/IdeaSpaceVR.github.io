@@ -5,11 +5,17 @@
     <title>IdeaSpaceVR a-frame-ui-modal-component</title>
     <meta name="description" content="IdeaSpaceVR a-frame-ui-modal-component">
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="https://raw.githubusercontent.com/IdeaSpaceVR/aframe-ui-modal-component/master/dist/aframe-ui-modal-component.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+
+      <a-entity ui-modal>
+          <a-plane rotation="0 90 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      </a-entity>
+
+      <a-sky id="sky" color="#ECECEC"></a-sky>
+
     </a-scene>
   </body>
 </html>
