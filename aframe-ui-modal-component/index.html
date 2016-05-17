@@ -2,20 +2,36 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>IdeaSpaceVR a-frame-ui-modal-component</title>
+    <title>IdeaSpace a-frame-ui-modal-component</title>
     <meta name="description" content="IdeaSpaceVR a-frame-ui-modal-component">
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
     <script src="https://rawgit.com/IdeaSpaceVR/aframe-ui-modal-component/master/dist/aframe-ui-modal-component.min.js"></script>
   </head>
   <body>
+    
     <a-scene>
+      
+        <a-entity position="0 1.8 5">
+            <a-entity camera="far: 5000; fov: 80; near: 0.5;" look-controls>
+                <a-entity
+                    cursor="fuse: false; maxDistance: 5000;"
+                    position="0 0 -3.4"
+                    id="cursor"
+                    geometry="primitive: ring; radiusOuter: 0.10; radiusInner: 0.05;"
+                    material="color: #0080e5; shader: flat;">
+                </a-entity>
+            </a-entity>
+        </a-entity>
+        
+        <a-entity ui-modal visible="false">
+          <a-plane width="3" height="1" color="#7BC8A4"></a-plane>
+          <a-plane width="3" height="1" color="#7BC8A4"></a-plane>
+          <a-plane width="3" height="1" color="#7BC8A4"></a-plane>
+        </a-entity>
 
-      <a-entity ui-modal="src: #sky">
-          <a-plane rotation="0 0 0" width="4" height="4" color="#7BC8A4" visible="false"></a-plane>
-      </a-entity>
-
-      <a-sky id="sky" color="#ECECEC"></a-sky>
+        <a-sky src="images/sky.png"></a-sky>
 
     </a-scene>
+
   </body>
 </html>
